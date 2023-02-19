@@ -1,0 +1,22 @@
+{{define "page"}}
+{{template "_header"}}
+
+<body>
+    <div class="container">
+        <div class="row text-center pt-5">
+            <h1>{{.title}}</h1>
+        </div>
+        <hr>
+        <div class="row gx-5 gy-5">
+            <div class="col-sm-3">
+                <ul class="list-group list-group-flush">
+                    {{.list}}
+                </ul>
+            </div>
+            <div class="col-sm-9">
+                {{.content}}
+                {{template "_footer"}}
+                {{end}}
+            </div>
+        </div>
+    </div>
