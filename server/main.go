@@ -115,6 +115,6 @@ func main() {
 	router := httprouter.New()
 	router.GET("/", homeHanlder)
 	router.GET("/:course/:article", pageHandler)
-
+	log.Println("listening on port ", 8080)
 	log.Fatal(http.ListenAndServe(":8080", router))
 }
