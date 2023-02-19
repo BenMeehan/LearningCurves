@@ -39,7 +39,7 @@ func getCards() {
 
 func getDirectories() []string {
 	var dirs []string
-	entries, err := os.ReadDir("../tuts")
+	entries, err := os.ReadDir("tuts")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -53,7 +53,7 @@ func getDirectories() []string {
 func getFiles(dir string) []string {
 	var files []string
 	var filenames []string
-	fs, err := ioutil.ReadDir("../tuts/" + dir)
+	fs, err := ioutil.ReadDir("tuts/" + dir)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -82,7 +82,7 @@ func pageHandler(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	course := ps.ByName("course")
 	article := ps.ByName("article")
 
-	dat, err := os.ReadFile("../tuts/" + course + "/" + article + ".md")
+	dat, err := os.ReadFile("tuts/" + course + "/" + article + ".md")
 	if err != nil {
 		fmt.Fprint(w, err.Error())
 	}
