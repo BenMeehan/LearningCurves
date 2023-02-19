@@ -1,5 +1,7 @@
 # wonder-tutorials
-Basic tutorials on various topics in computer science.
+Basic tutorials on various topics in computer science with supporting projects to relate what you learn to the real world.
+
+All tutorials are available under the 'tuts' directory of this repo.
 
 Website with better formatting :  https://learningcurves.onrender.com
 
