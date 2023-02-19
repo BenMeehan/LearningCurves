@@ -8,4 +8,5 @@ Basic tutorials on various topics in computer science.
 
 
 ## Topics
-- [Golang](https://github.com/BenMeehan/wonder-tutorials/blob/main/golang)
+- [Golang](https://github.com/BenMeehan/wonder-tutorials/blob/main/tuts/golang)
+- [ZeroMQ](https://github.com/BenMeehan/wonder-tutorials/blob/main/tuts/zmq)
