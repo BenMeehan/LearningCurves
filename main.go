@@ -29,7 +29,7 @@ func getCards() {
 				<div class="col">
 					<div class="card-body">
 					<h5 class="card-title">` + strings.Title(k) + `</h5>
-					<a class="btn btn-primary" href="/` + k + `/01.intro">Learn</a>
+					<a class="btn btn-primary" href="/c/` + k + `/01.intro">Learn</a>
 					</div>
 				</div>
 			  </div>`
@@ -63,7 +63,7 @@ func getFiles(dir string) []string {
 	}
 	natsort.Sort(filenames)
 	for _, name := range filenames {
-		files = append(files, `<li class="list-group-item">`+`<a href="/`+dir+"/"+name[:len(name)-3]+`">`+name[:len(name)-3]+`</a></li>`)
+		files = append(files, `<li class="list-group-item">`+`<a href="/c/`+dir+"/"+name[:len(name)-3]+`">`+name[:len(name)-3]+`</a></li>`)
 	}
 	return files
 }
@@ -113,8 +113,9 @@ func main() {
 		panic(err)
 	}
 	router := httprouter.New()
+	router.ServeFiles("/assets/*filepath", http.Dir("assets"))
 	router.GET("/", homeHanlder)
-	router.GET("/:course/:article", pageHandler)
+	router.GET("/c/:course/:article", pageHandler)
 	log.Println("listening on port ", 8080)
 	log.Fatal(http.ListenAndServe(":8080", router))
 }
