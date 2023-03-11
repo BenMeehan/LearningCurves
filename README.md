@@ -9,6 +9,7 @@ Website with better formatting :  https://learningcurves.onrender.com
 - [Golang](https://github.com/BenMeehan/wonder-tutorials/blob/main/tuts/golang)
 - [ZeroMQ](https://github.com/BenMeehan/wonder-tutorials/blob/main/tuts/zmq)
 - [Kubernetes](https://github.com/BenMeehan/wonder-tutorials/blob/main/tuts/kubernetes)
+- [React JS _version 18_](https://github.com/BenMeehan/wonder-tutorials/blob/main/tuts/react18)
 
 ## Authors
 
